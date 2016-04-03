@@ -2,54 +2,54 @@
 layout: base
 ---
 <div class="wrapper">
-    <header>
-        {% if site.compass.logo %}
-        <div class="logo-container">
-          <a class="logo" href="{{ page.baseurl }}" style="background-image: url('{{ site.baseurl }}{{ site.compass.logo }}')"></a>
-        </div>
-        {% endif %}
+	<header>
+		{% if site.compass.logo %}
+		<div class="logo-container">
+			<a class="logo" href="{{ page.baseurl }}" style="background-image: url('{{ site.baseurl }}{{ site.compass.logo }}')"></a>
+		</div>
+		{% endif %}
 
-        {% if site.compass.author %}
-        <div class="author-container"><h1>{{ site.compass.author }}</h1></div>
-        {% endif %} 
+		{% if site.compass.author %}
+		<div class="author-container"><h1>{{ site.compass.author }}</h1></div>
+		{% endif %}
 
-        {% if site.compass.tagline %}
-        <div class="tagline-container"><p>{{ site.compass.tagline }}</p></div>
-        {% endif %}
+		{% if site.compass.tagline %}
+		<div class="tagline-container"><p>{{ site.compass.tagline }}</p></div>
+		{% endif %}
 		<ul class="fa-ul main-list">
-		  <li class="main-list-item">
+			<li class="main-list-item">
 			<a href="https://github.com/Epix37/Hearthstone-Deck-Tracker/releases/latest">Download</a>
 			<span class="fa fa-download fa-lg main-list-item-icon"></span>
-		  </li>
-		  <li class="main-list-item">
+			</li>
+			<li class="main-list-item">
 			<a href="https://github.com/Epix37/Hearthstone-Deck-Tracker">GitHub</a>
 			<span class="fa fa-github fa-lg main-list-item-icon"></span>
-		  </li>
-		  <hr />	  
-		  <h2>Contact</h2>
-		  <li class="main-list-item">
+			</li>
+			<hr />
+			<h2>Contact</h2>
+			<li class="main-list-item">
 			<a href="https://twitter.com/hsdecktracker">@hsdecktracker</a>
 			<span class="fa fa-twitter fa-lg main-list-item-icon"></span>
-		  </li>
-		  <li class="main-list-item">
+			</li>
+			<li class="main-list-item">
 			<a href="mailto:support@hsdecktracker.net">support@hsdecktracker.net</a>
 			<span class="fa fa-envelope fa-lg main-list-item-icon"></span>
-		  </li>	 
-		  <hr /> 
-		  <h2>Donate</h2>
-		  <li class="main-list-item">
+			</li>
+			<hr />
+			<h2>Donate</h2>
+			<li class="main-list-item">
 			<a href="https://www.patreon.com/HearthstoneDeckTracker">Patreon</a>
 			/
 			<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=PZDMUT88NLFYJ">PayPal</a>
 			<span class="fa fa-heart fa-lg main-list-item-icon"></span>
-		  </li>
+			</li>
 		</ul>
-    </header>
-    <main>
-      {% if site.compass.include_content %}
-      <div class="content">
-        {% include content.html %}
-      </div>
-      {% endif %}
-    </main>
+	</header>
+	<main>
+		{% if site.compass.include_content %}
+		<div class="content">
+		{% include content.html %}
+		</div>
+		{% endif %}
+	</main>
 </div>
