@@ -24,3 +24,6 @@ highlighter: rouge
 
 # Permalinks
 permalink: pretty
+
+sass:
+  style: :compressed
