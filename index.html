@@ -3,53 +3,43 @@ layout: base
 ---
 <div class="wrapper">
 	<header>
-		{% if site.compass.logo %}
 		<div class="logo-container">
-			<a class="logo" href="{{ page.baseurl }}" style="background-image: url('{{ site.baseurl }}{{ site.compass.logo }}')"></a>
+			<a class="logo" href="{{ page.baseurl }}" style="background-image: url('{{ site.vars.logo|prepend:site.baseurl }}')"></a>
 		</div>
-		{% endif %}
-
-		{% if site.compass.author %}
-		<div class="author-container"><h1>{{ site.compass.author }}</h1></div>
-		{% endif %}
-
-		{% if site.compass.tagline %}
-		<div class="tagline-container"><p>{{ site.compass.tagline }}</p></div>
-		{% endif %}
+		<div class="author-container"><h1>{{ site.vars.name }}</h1></div>
+		<div class="tagline-container"><p>{{ site.vars.description }}</p></div>
 		<ul class="fa-ul main-list">
 			<li class="main-list-item">
-			<a href="https://github.com/Epix37/Hearthstone-Deck-Tracker/releases/latest">Download</a>
+			<a href="{{ site.vars.links.download }}">Download</a>
 			<span class="fa fa-download fa-lg main-list-item-icon"></span>
 			</li>
 			<li class="main-list-item">
-			<a href="https://github.com/Epix37/Hearthstone-Deck-Tracker">GitHub</a>
+			<a href="https://github.com/{{ site.vars.links.github }}">GitHub</a>
 			<span class="fa fa-github fa-lg main-list-item-icon"></span>
 			</li>
-			<hr />
+			<hr/>
+
 			<h2>Contact</h2>
 			<li class="main-list-item">
-			<a href="https://twitter.com/hsdecktracker">@hsdecktracker</a>
+			<a href="https://twitter.com/{{ site.vars.links.twitter }}">@{{ site.vars.links.twitter }}</a>
 			<span class="fa fa-twitter fa-lg main-list-item-icon"></span>
 			</li>
 			<li class="main-list-item">
-			<a href="mailto:support@hsdecktracker.net">support@hsdecktracker.net</a>
+			<a href="mailto:{{ site.vars.email }}">{{ site.vars.email }}</a>
 			<span class="fa fa-envelope fa-lg main-list-item-icon"></span>
 			</li>
-			<hr />
+			<hr/>
+
 			<h2>Donate</h2>
 			<li class="main-list-item">
-			<a href="https://www.patreon.com/HearthstoneDeckTracker">Patreon</a>
-			/
-			<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=PZDMUT88NLFYJ">PayPal</a>
+			<a href="https://www.patreon.com/{{ site.vars.links.patreon }}">Patreon</a> /
+			<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id={{ site.vars.links.paypal }}">PayPal</a>
 			<span class="fa fa-heart fa-lg main-list-item-icon"></span>
 			</li>
 		</ul>
 	</header>
-	<main>
-		{% if site.compass.include_content %}
-		<div class="content">
-		{% include content.html %}
-		</div>
-		{% endif %}
+	<main class="content">
+		{% capture features %}{% include features.md %}{% endcapture %}
+		{{ features|markdownify }}
 	</main>
 </div>

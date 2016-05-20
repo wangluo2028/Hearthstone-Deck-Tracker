@@ -6,7 +6,7 @@ $anchor-text-color: #086F9E;
 $background-color: #FFFFFF;
 
 body {
-	font-family: 'Vollkorn', serif;
+	font-family: "Vollkorn", serif;
 	color: $text-color;
 	background-color: $background-color;
 }
@@ -99,12 +99,10 @@ footer {
 	height: 20px;
 }
 
-.poweredby {
-	font-family: "Arial Narrow", Arial;
-	font-size: 0.6em;
-	line-height: 0.6em;
-	padding: 0 5px;
+.content img {
+	width: 340px;
 }
+
 
 /*** media queries ***/
 /* X-Small devices (phones, 480px and up) */
